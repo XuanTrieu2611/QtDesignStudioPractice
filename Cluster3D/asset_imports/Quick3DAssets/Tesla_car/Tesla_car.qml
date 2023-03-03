@@ -2,596 +2,17 @@ import QtQuick
 import QtQuick3D
 
 Node {
-    // Materials
-    DefaultMaterial {
-        id: hub_rb_0_material
-        diffuseMap: Texture {
-            source: "maps/caliper.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: hub_rf_0_material
-        diffuseMap: Texture {
-            source: "maps/caliper.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: hub_rf_1_material
-        diffuseMap: Texture {
-            source: "maps/caliperbadge.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: dvorright_0_material
-        diffuseMap: Texture {
-            source: "maps/black.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: movsteer_1_0_1_material
-        diffuseMap: Texture {
-            source: "maps/gray.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: movsteer_1_0_0_material
-        diffuseMap: Texture {
-            source: "maps/leather1.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: chassis_0_material
-        diffuseColor: "#ffcccccc"
-    }
-    DefaultMaterial {
-        id: jUST_BLACK_0_material
-        diffuseMap: Texture {
-            source: "maps/black.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: primary_material
-        diffuseColor: "#ff3cff00"
-    }
-    DefaultMaterial {
-        id: primary_001_material
-        diffuseMap: Texture {
-            source: "maps/remap2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: black_lights_0_material
-        diffuseMap: Texture {
-            source: "maps/black.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: back_chrome_light_0_material
-        diffuseMap: Texture {
-            source: "maps/gray1.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: pantulans_0_material
-        diffuseMap: Texture {
-            source: "maps/red2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/red2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: right_rear_light_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: breaklight_l_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: foglight_r_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: foglight_l_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: right_front_light_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: left_front_light_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: aluminium_light_0_material
-        diffuseMap: Texture {
-            source: "maps/gray.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: tembus_red_0_material
-        diffuseMap: Texture {
-            source: "maps/tembus.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        opacity: 0.747749
-    }
-    DefaultMaterial {
-        id: light_night_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: indicator_lf_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: indicator_rf_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: hitam_0_material
-        diffuseMap: Texture {
-            source: "maps/black.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: plastic_0_material
-        diffuseMap: Texture {
-            source: "maps/black.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: belt_0_material
-        diffuseMap: Texture {
-            source: "maps/belt.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: satin_red_0_material
-        diffuseMap: Texture {
-            source: "maps/red2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: suspensi_0_material
-        diffuseMap: Texture {
-            source: "maps/gray1.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: suspensi_1_material
-        diffuseMap: Texture {
-            source: "maps/gray1.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: aluminium2_0_material
-        diffuseMap: Texture {
-            source: "maps/gray.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: putih_0_material
-        diffuseMap: Texture {
-            source: "maps/leather2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: carpet_0_material
-        diffuseMap: Texture {
-            source: "maps/leather1.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: carpet_Light_0_material
-        diffuseColor: "#ff242424"
-    }
-    DefaultMaterial {
-        id: texture_Buttons_0_material
-        diffuseMap: Texture {
-            source: "maps/button.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: lCDs_0_material
-        diffuseMap: Texture {
-            source: "maps/lcd.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/lcd.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: seat_Leather_white_0_material
-        diffuseMap: Texture {
-            source: "maps/leather2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: mirror_inside_0_material
-        diffuseColor: "#ffcccccc"
-    }
-    DefaultMaterial {
-        id: glass_0_material
-        diffuseMap: Texture {
-            source: "maps/kaca.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        opacity: 0.527273
-    }
-    DefaultMaterial {
-        id: glass_1_material
-        diffuseMap: Texture {
-            source: "maps/kaca2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        opacity: 0.663636
-    }
-    DefaultMaterial {
-        id: platnomor_1_material
-        diffuseColor: "#ffa3a3a3"
-    }
-    DefaultMaterial {
-        id: platnomor_2_material
-        diffuseColor: "#ffcccccc"
-    }
-    DefaultMaterial {
-        id: indicator_rr_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: indicator_lr_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: left_rear_light_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: revlight_L_material
-        diffuseMap: Texture {
-            source: "maps/vehiclelights.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: door_lf_0_material
-        diffuseColor: "#ff131313"
-    }
-    DefaultMaterial {
-        id: door_lf_5_material
-        diffuseColor: "#ff0b0b0b"
-    }
-    DefaultMaterial {
-        id: primary_002_material
-        diffuseMap: Texture {
-            source: "maps/remap3.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: primary_004_material
-        diffuseColor: "#ff3cff00"
-    }
-    DefaultMaterial {
-        id: front_black_0_material
-        diffuseMap: Texture {
-            source: "maps/black.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: light_pantulan_0_material
-        diffuseMap: Texture {
-            source: "maps/red3.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-        emissiveMap: Texture {
-            source: "maps/red3.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: wheels_2_material
-        diffuseMap: Texture {
-            source: "maps/tyre.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: wheels_0_material
-        diffuseMap: Texture {
-            source: "maps/gray.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: wheels_1_material
-        diffuseMap: Texture {
-            source: "maps/black.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: wheels_3_material
-        diffuseMap: Texture {
-            source: "maps/tyre2.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: wheels_4_material
-        diffuseMap: Texture {
-            source: "maps/disc.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    DefaultMaterial {
-        id: wheels_6_material
-        diffuseMap: Texture {
-            source: "maps/rims.PNG.png"
-            pivotU: 0.5
-            pivotV: 0.5
-            generateMipmaps: true
-            mipFilter: Texture.Linear
-        }
-    }
-    // end of Materials
+    id: rootNode
+    property bool doorLeftFront: false
+    property bool doorRightFront: false
+    property bool doorLeftRear: false
+    property bool doorRightRear: false
+    property bool openTrunkFront: false
 
+    property int doorOpenAngle: -50
+    property int openTruckAngle: 20
     Node {
-        id: rootNode
+        id: rootNode1
         Node {
             id: tesla_Model_3
             rotation: Qt.quaternion(0.707107, -0.707107, 0, 0)
@@ -1335,6 +756,10 @@ Node {
                     Model {
                         id: door_lf
                         source: "meshes/door_lf.mesh"
+                        eulerRotation.z: rootNode.doorLeftFront ? doorOpenAngle : 0
+                        Behavior on eulerRotation.z {
+                            NumberAnimation { duration: 1000 }
+                        }
                         materials: [
                             jUST_BLACK_0_material,
                             texture_Buttons_0_material,
@@ -1368,6 +793,10 @@ Node {
                     Model {
                         id: door_lr
                         source: "meshes/door_lr.mesh"
+                        eulerRotation.z: rootNode.doorLeftRear ? doorOpenAngle : 0
+                        Behavior on eulerRotation.z {
+                            NumberAnimation { duration: 1000 }
+                        }
                         materials: [
                             jUST_BLACK_0_material,
                             texture_Buttons_0_material,
@@ -1399,6 +828,10 @@ Node {
                     Model {
                         id: door_rf
                         source: "meshes/door_rf.mesh"
+                        eulerRotation.z: rootNode.doorRightFront ? -doorOpenAngle : 0
+                        Behavior on eulerRotation.z {
+                            NumberAnimation { duration: 1000 }
+                        }
                         materials: [
                             jUST_BLACK_0_material,
                             texture_Buttons_0_material,
@@ -1431,6 +864,10 @@ Node {
                     Model {
                         id: door_rr
                         source: "meshes/door_rr.mesh"
+                        eulerRotation.z: rootNode.doorRightRear ? -doorOpenAngle : 0
+                        Behavior on eulerRotation.z {
+                            NumberAnimation { duration: 1000 }
+                        }
                         materials: [
                             jUST_BLACK_0_material,
                             texture_Buttons_0_material,
@@ -1586,6 +1023,10 @@ Node {
                     Model {
                         id: bonnet_ok
                         source: "meshes/bonnet_ok.mesh"
+                        eulerRotation.x: rootNode.openTrunkFront ? openTruckAngle : 0
+                        Behavior on eulerRotation.x {
+                            NumberAnimation { duration: 1000 }
+                        }
                         materials: [
                             primary_material
                         ]
@@ -1751,4 +1192,717 @@ Node {
             }
         }
     }
+
+    Node {
+        id: __materialLibrary__
+
+        DefaultMaterial {
+            id: hub_rb_0_material
+            objectName: "hub_rb_0_material"
+            diffuseMap: Texture {
+                source: "maps/caliper.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: hub_rf_0_material
+            objectName: "hub_rf_0_material"
+            diffuseMap: Texture {
+                source: "maps/caliper.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: hub_rf_1_material
+            objectName: "hub_rf_1_material"
+            diffuseMap: Texture {
+                source: "maps/caliperbadge.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: dvorright_0_material
+            objectName: "dvorright_0_material"
+            diffuseMap: Texture {
+                source: "maps/black.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: movsteer_1_0_1_material
+            objectName: "movsteer_1_0_1_material"
+            diffuseMap: Texture {
+                source: "maps/gray.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: movsteer_1_0_0_material
+            objectName: "movsteer_1_0_0_material"
+            diffuseMap: Texture {
+                source: "maps/leather1.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: chassis_0_material
+            objectName: "chassis_0_material"
+            diffuseColor: "#ffcccccc"
+        }
+
+        DefaultMaterial {
+            id: jUST_BLACK_0_material
+            objectName: "jUST_BLACK_0_material"
+            diffuseMap: Texture {
+                source: "maps/black.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: primary_material
+            objectName: "primary_material"
+            diffuseColor: "white"
+        }
+
+        DefaultMaterial {
+            id: primary_001_material
+            objectName: "primary_001_material"
+            diffuseMap: Texture {
+                source: "maps/remap2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: black_lights_0_material
+            objectName: "black_lights_0_material"
+            diffuseMap: Texture {
+                source: "maps/black.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: back_chrome_light_0_material
+            objectName: "back_chrome_light_0_material"
+            diffuseMap: Texture {
+                source: "maps/gray1.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: pantulans_0_material
+            objectName: "pantulans_0_material"
+            diffuseMap: Texture {
+                source: "maps/red2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/red2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: right_rear_light_material
+            objectName: "right_rear_light_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: breaklight_l_material
+            objectName: "breaklight_l_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: foglight_r_material
+            objectName: "foglight_r_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: foglight_l_material
+            objectName: "foglight_l_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: right_front_light_material
+            blendMode: DefaultMaterial.SourceOver
+            diffuseColor: "#ffffff"
+            objectName: "right_front_light_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: left_front_light_material
+            opacity: 1
+            diffuseColor: "#ffffff"
+            depthDrawMode: Material.OpaqueOnlyDepthDraw
+            cullMode: Material.BackFaceCulling
+            objectName: "left_front_light_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: aluminium_light_0_material
+            objectName: "aluminium_light_0_material"
+            diffuseMap: Texture {
+                source: "maps/gray.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: tembus_red_0_material
+            diffuseMap: Texture {
+                source: "maps/tembus.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            opacity: 0.7
+            objectName: "tembus_red_0_material"
+        }
+
+        DefaultMaterial {
+            id: light_night_material
+            objectName: "light_night_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: indicator_lf_material
+            objectName: "indicator_lf_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: indicator_rf_material
+            objectName: "indicator_rf_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: hitam_0_material
+            objectName: "hitam_0_material"
+            diffuseMap: Texture {
+                source: "maps/black.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: plastic_0_material
+            objectName: "plastic_0_material"
+            diffuseMap: Texture {
+                source: "maps/black.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: belt_0_material
+            objectName: "belt_0_material"
+            diffuseMap: Texture {
+                source: "maps/belt.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: satin_red_0_material
+            objectName: "satin_red_0_material"
+            diffuseMap: Texture {
+                source: "maps/red2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: suspensi_0_material
+            objectName: "suspensi_0_material"
+            diffuseMap: Texture {
+                source: "maps/gray1.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: suspensi_1_material
+            objectName: "suspensi_1_material"
+            diffuseMap: Texture {
+                source: "maps/gray1.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: aluminium2_0_material
+            objectName: "aluminium2_0_material"
+            diffuseMap: Texture {
+                source: "maps/gray.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: putih_0_material
+            objectName: "putih_0_material"
+            diffuseMap: Texture {
+                source: "maps/leather2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: carpet_0_material
+            objectName: "carpet_0_material"
+            diffuseMap: Texture {
+                source: "maps/leather1.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: carpet_Light_0_material
+            objectName: "carpet_Light_0_material"
+            diffuseColor: "#ff242424"
+        }
+
+        DefaultMaterial {
+            id: texture_Buttons_0_material
+            objectName: "texture_Buttons_0_material"
+            diffuseMap: Texture {
+                source: "maps/button.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: lCDs_0_material
+            objectName: "lCDs_0_material"
+            diffuseMap: Texture {
+                source: "maps/lcd.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/lcd.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: seat_Leather_white_0_material
+            objectName: "seat_Leather_white_0_material"
+            diffuseMap: Texture {
+                source: "maps/leather2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: mirror_inside_0_material
+            objectName: "mirror_inside_0_material"
+            diffuseColor: "#ffcccccc"
+        }
+
+        DefaultMaterial {
+            id: glass_0_material
+            diffuseMap: Texture {
+                source: "maps/kaca.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            opacity: 0.527273
+            objectName: "glass_0_material"
+        }
+
+        DefaultMaterial {
+            id: glass_1_material
+            diffuseMap: Texture {
+                source: "maps/kaca2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            opacity: 0.663636
+            objectName: "glass_1_material"
+        }
+
+        DefaultMaterial {
+            id: platnomor_1_material
+            objectName: "platnomor_1_material"
+            diffuseColor: "#ffa3a3a3"
+        }
+
+        DefaultMaterial {
+            id: platnomor_2_material
+            objectName: "platnomor_2_material"
+            diffuseColor: "#ffcccccc"
+        }
+
+        DefaultMaterial {
+            id: indicator_rr_material
+            objectName: "indicator_rr_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: indicator_lr_material
+            objectName: "indicator_lr_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: left_rear_light_material
+            objectName: "left_rear_light_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: revlight_L_material
+            objectName: "revlight_L_material"
+            diffuseMap: Texture {
+                source: "maps/vehiclelights.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: door_lf_0_material
+            objectName: "door_lf_0_material"
+            diffuseColor: "#ff131313"
+        }
+
+        DefaultMaterial {
+            id: door_lf_5_material
+            objectName: "door_lf_5_material"
+            diffuseColor: "#ff0b0b0b"
+        }
+
+        DefaultMaterial {
+            id: primary_002_material
+            objectName: "primary_002_material"
+            diffuseMap: Texture {
+                source: "maps/remap3.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: primary_004_material
+            objectName: "primary_004_material"
+            diffuseColor: "#ff3cff00"
+        }
+
+        DefaultMaterial {
+            id: front_black_0_material
+            objectName: "front_black_0_material"
+            diffuseMap: Texture {
+                source: "maps/black.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: light_pantulan_0_material
+            objectName: "light_pantulan_0_material"
+            diffuseMap: Texture {
+                source: "maps/red3.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+            emissiveMap: Texture {
+                source: "maps/red3.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: wheels_2_material
+            objectName: "wheels_2_material"
+            diffuseMap: Texture {
+                source: "maps/tyre.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: wheels_0_material
+            objectName: "wheels_0_material"
+            diffuseMap: Texture {
+                source: "maps/gray.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: wheels_1_material
+            objectName: "wheels_1_material"
+            diffuseMap: Texture {
+                source: "maps/black.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: wheels_3_material
+            objectName: "wheels_3_material"
+            diffuseMap: Texture {
+                source: "maps/tyre2.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: wheels_4_material
+            objectName: "wheels_4_material"
+            diffuseMap: Texture {
+                source: "maps/disc.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+
+        DefaultMaterial {
+            id: wheels_6_material
+            objectName: "wheels_6_material"
+            diffuseMap: Texture {
+                source: "maps/rims.PNG.png"
+                pivotU: 0.5
+                pivotV: 0.5
+                generateMipmaps: true
+                mipFilter: Texture.Linear
+            }
+        }
+    }
 }
+
+

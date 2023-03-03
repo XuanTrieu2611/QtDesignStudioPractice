@@ -8,7 +8,6 @@ import Cluster3D
 Window {
     width: mainScreen.width
     height: mainScreen.height
-    color: "green"
     visible: true
     title: "Cluster3D"
 

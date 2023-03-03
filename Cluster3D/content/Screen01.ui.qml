@@ -9,6 +9,7 @@ import QtQuick 6.3
 import QtQuick.Controls 6.3
 import QtQuick3D 6.3
 import Cluster3D
+import Quick3DAssets.Tesla_car 1.0
 
 Rectangle {
     width: Constants.width
@@ -30,21 +31,32 @@ Rectangle {
 
         Node {
             id: scene
+
+            Tesla_car {
+                id: tesla_car
+                x: 0
+                eulerRotation.y: 210
+            }
+        }
+
+        PerspectiveCamera {
+            id: sceneCamera
+            x: -0
+            y: 169.38
+            eulerRotation.z: -0
+            eulerRotation.y: 0
+            eulerRotation.x: -11.98921
+            fieldOfView: 25
+            clipFar: 7000
+            z: 934.44269
+
             DirectionalLight {
                 id: directionalLight
-            }
-
-            PerspectiveCamera {
-                id: sceneCamera
-                z: 350
-            }
-
-            Model {
-                id: cubeModel
-                eulerRotation.y: 45
-                eulerRotation.x: 30
-                materials: defaultMaterial
-                source: "#Cube"
+                x: -0
+                y: 82.708
+                color: "#eae8e8"
+                brightness: 1
+                z: 94.65283
             }
         }
     }
@@ -56,13 +68,5 @@ Rectangle {
             objectName: "Default Material"
             diffuseColor: "#4aee45"
         }
-    }
-
-    Text {
-        text: qsTr("Hello Cluster3D")
-        anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: 100
-        font.family: Constants.font.family
     }
 }
