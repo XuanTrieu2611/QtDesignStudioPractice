@@ -12,6 +12,7 @@ import Cluster3D
 import Quick3DAssets.Tesla_car 1.0
 
 Rectangle {
+    id: rectangle
     width: Constants.width
     height: Constants.height
 
@@ -69,4 +70,25 @@ Rectangle {
             diffuseColor: "#4aee45"
         }
     }
+    states: [
+        State {
+            name: "right"
+        },
+        State {
+            name: "left"
+
+            PropertyChanges {
+                target: tesla_car
+                eulerRotation.y: 150
+            }
+        },
+        State {
+            name: "front"
+
+            PropertyChanges {
+                target: tesla_car
+                eulerRotation.y: 180
+            }
+        }
+    ]
 }
