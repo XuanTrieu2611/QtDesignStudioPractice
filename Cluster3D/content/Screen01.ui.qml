@@ -12,12 +12,15 @@ import Cluster3D
 import Quick3DAssets.Tesla_car 1.0
 
 Rectangle {
+    property alias openDoorLeftFront: tesla_car.doorLeftFront
+    property alias openDoorRightFront: tesla_car.doorRightFront
+    property alias openDoorLeftRear: tesla_car.doorLeftRear
+    property alias openDoorRightRear: tesla_car.doorRightRear
+    property alias openTrunkFront: tesla_car.openTrunkFront
     id: rectangle
-    width: Constants.width
-    height: Constants.height
-
-    color: Constants.backgroundColor
-
+    //width: Constants.width
+    //height: Constants.height
+    //color: Constants.backgroundColor
     View3D {
         id: view3D
         anchors.fill: parent
