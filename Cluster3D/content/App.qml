@@ -34,6 +34,7 @@ Window {
                 anchors.fill: parent
                 onClicked: {
                     mainScreen.openDoorLeftFront = !mainScreen.openDoorLeftFront
+                    mainScreen.viewState = "left"
                     if(text1.text ==="Open"){
                         text1.text = "Close"
                     } else{
@@ -57,6 +58,7 @@ Window {
                 anchors.fill: parent
                 onClicked: {
                     mainScreen.openDoorRightFront = !mainScreen.openDoorRightFront
+                    mainScreen.viewState = "right"
                     if(textrightfront.text ==="Open"){
                         textrightfront.text = "Close"
                     } else{
@@ -80,6 +82,7 @@ Window {
                 anchors.fill: parent
                 onClicked: {
                     mainScreen.openDoorRightRear = !mainScreen.openDoorRightRear
+                    mainScreen.viewState = "right"
                     if(textrightrear.text ==="Open"){
                         textrightrear.text = "Close"
                     } else{
@@ -103,6 +106,7 @@ Window {
                 anchors.fill: parent
                 onClicked: {
                     mainScreen.openDoorLeftRear = !mainScreen.openDoorLeftRear
+                    mainScreen.viewState = "left"
                     if(textleftrear.text ==="Open"){
                         textleftrear.text = "Close"
                     } else{
@@ -134,6 +138,9 @@ Window {
                 }
             }
         }
+
+
+
     }
 
 

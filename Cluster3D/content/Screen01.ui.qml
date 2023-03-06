@@ -17,6 +17,8 @@ Rectangle {
     property alias openDoorLeftRear: tesla_car.doorLeftRear
     property alias openDoorRightRear: tesla_car.doorRightRear
     property alias openTrunkFront: tesla_car.openTrunkFront
+
+    property string viewState: "right"
     id: rectangle
     //width: Constants.width
     //height: Constants.height
@@ -76,10 +78,11 @@ Rectangle {
     states: [
         State {
             name: "right"
+            when: rectangle.viewState === "right"
         },
         State {
             name: "left"
-
+            when: rectangle.viewState === "left"
             PropertyChanges {
                 target: tesla_car
                 eulerRotation.y: 150
@@ -87,11 +90,34 @@ Rectangle {
         },
         State {
             name: "front"
-
+            when: rectangle.viewState === "front"
             PropertyChanges {
                 target: tesla_car
                 eulerRotation.y: 180
             }
         }
     ]
+    transitions:[ Transition {
+        from: "right"
+        to: "*"
+        PropertyAnimation{
+            target: tesla_car
+            properties: "eulerRotation.y"
+            duration: 1500
+            easing.type: Easing.InOutQuad
+        }
+    },
+    Transition {
+        from: "*"
+        to: "right"
+        PropertyAnimation{
+            target: tesla_car
+            properties: "eulerRotation.y"
+            duration: 1500
+            easing.type: Easing.InOutQuad
+        }
+
+    }
+    ]
 }
+
